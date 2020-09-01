@@ -10,7 +10,6 @@ jobs:
       - run:
           name: "Build a Docker image"
           command: |
-            npm init && \
             docker build -t mfunaki/mynode-container . && \
             echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin && \
             docker push mfunaki/mynode-container
