@@ -3,7 +3,8 @@ FROM node:12
 
 # package.json と package-lock.json の両方をコンテナにコピー
 COPY package*.json ./
-RUN npm install
+RUN npm install express
+RUN npm install jest supertest
 
 # ポート番号8080でサーバ起動
 EXPOSE 8080
